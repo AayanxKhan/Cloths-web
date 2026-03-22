@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitag</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="assests/images/Nitag-logo.png" alt="">
+                <span>Nitag</span>
+            </div>
+
+            <ul>
+                <li><a href="#main">Products</a></li>
+                <li><a href="#" class="trans">Quick Order</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="hero-text">
+                <h1>
+                    <span class="light-bg">LET’S</span><br>
+                    EXPLORE<br>
+                    <span class="highlight">UNIQUE</span><br>
+                    CLOTHES.
+                </h1>
+
+                <p>Live for Influential and Innovative fashion!</p>
+
+                <button class="openPopupBtn trans" data-product="You don't select the product please select first from products section." >Shop Now</button>
+            </div>
+
+            <div class="hero-image">
+                <img src="assests/images/Fashion-Model.png" alt="Fashion Model">
+            </div>
+
+        </section>
+
+    </header>
+    <main id="main"class="main">
+        <div  class="products-heading">
+            <h3>Products</h3>
+        </div>
+        <section class="product-section">
+            <div class="product">
+                <img src="assests/images/product-1.png" alt="product image">
+                <div>
+                <h4>Hoody</h4>
+                <button class="openPopupBtn trans" data-product="Hoody">Order Now</button>
+            </div>
+            </div>
+            <div class="product">
+                <img src="assests/images/product-2.png" alt="product image">
+                <div>
+                <h4>Coats</h4>
+                <button class="openPopupBtn trans" data-product="Coats">Order Now</button>
+            </div>
+            </div>
+            <div class="product">
+                <img src="assests/images/product-3.png" alt="product image">
+                <div>
+                <h4>T-Shirt</h4>
+                <button class="openPopupBtn trans" data-product="T-Shirt">Order Now</button>
+            </div>
+            </div>
+            <div class="product">
+                <img src="assests/images/product-4.png" alt="product image">
+                <div>
+                <h4>Pakistani suits</h4>
+                <button class="openPopupBtn trans" data-product="Pakistani suits">Order Now</button>
+            </div>
+            </div>
+        </section>
+
+
+        <div class="overlay hidden" id="orderOverlay" aria-hidden="true"></div>
+
+      <section class="popup hidden" id="orderPopup" aria-labelledby="orderTitle" aria-modal="true" role="dialog">
+        <div class="container popup__inner">
+          <div class="popup__card">
+            <div class="popup__header">
+              <h2 id="orderTitle">Place Your Order</h2>
+              <button class="iconBtn" type="button" id="closePopupBtn" aria-label="Close order form">
+                X
+              </button>
+            </div>
+
+            <p class="popup__note">
+              Cash on Delivery. The store owner will confirm your order by email/phone.
+              <br />
+              Tip: test using a local server (not `file://`) so EmailJS can send.
+            </p>
+
+            <div id="formMessage" class="formMessage hidden" role="status" aria-live="polite"></div>
+            <div id="formError" class="formError hidden" role="alert"></div>
+
+            <form id="orderForm" autocomplete="on">
+              <div class="formGrid">
+                <label class="field">
+                  <span>Full Name</span>
+                  <input id="fullName" name="full_name" type="text" placeholder="e.g., Ayesha Khan" required />
+                </label>
+
+                <label class="field">
+                  <span>Phone Number</span>
+                  <input id="phoneNumber" name="phone_number" type="tel" placeholder="e.g., 0300 1234567" required />
+                </label>
+
+                <label class="field field--full">
+                  <span>Address</span>
+                  <textarea id="address" name="address" rows="3" placeholder="Street, City, Country" required></textarea>
+                </label>
+
+                <label class="field field--full">
+                  <span>Product Name</span>
+                  <input id="productName" name="product_name" type="text" required readonly />
+                </label>
+              </div>
+
+              <div class="popup__actions">
+                <button class="btn btn--primary trans" type="submit" id="submitBtn">
+                  <span id="submitText">Submit Order</span>
+                  <span class="spinner hidden" id="submitSpinner" aria-hidden="true"></span>
+                </button>
+
+                <button class="btn btn--ghost trans" type="button" id="cancelBtn">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo + About -->
+    <div class="footer-box">
+      <h2 class="logo"><img src="assests/images/Nitag-logo.png" alt="">Nitag</h2>
+      <p>Your trusted fashion store. Stylish, trendy & affordable clothes.</p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-box">
+      <h3>Contact</h3>
+      <p>Email: support@nitag.com</p>
+      <p>Phone: +91 987---3210</p>
+      <p>Location: India</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Nitag. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="script.js"></script>
+</body>
+
+</html>
