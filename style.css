@@ -96,6 +96,13 @@ body {
     background: #333;
 }
 
+.navbar ul button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 20px;
+}
+
 /* HERO SECTION */
 .hero {
     background: #e9e9e9;
